@@ -1,19 +1,22 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
     <title>윤상운</title>
 <style>
+
 ul { overflow: hidden; }
         li {
             list-style: none;
             float:left; padding: 15px;
             }
+
         li:first-child { border-radius: 10px 0 0 0; }
         li:last-child { border-radius:  0 10px 0 10px; }
+
         li:nth-child(2n) { background-color: red; }
         li:nth-child(2n+1) { background-color:brown; }
+
         li:nth-child(2n+1):hover
 	{
             background-color: black;
@@ -26,11 +29,13 @@ ul { overflow: hidden; }
             color:yellow;
          }
         li a:first-child{color:blue}
+
 body {
     background-color: #efe5d0;
     font-family: Arial, "Trebuchet MS", sans-serif;
     margin: 10px 100px 100px 100px;
       }
+
 header {
     background-color: #e3afed;
     color: #000000;
@@ -38,9 +43,11 @@ header {
     text-align: center;
     padding: 5px;
         }
+
 h1 {
     margin: 0px;
     }
+
 section#main 
 {
     display: table-cell;
@@ -48,11 +55,14 @@ section#main
 text-align: center;
     padding: 15px;
 }
+
 nav {
     display: table-cell;
     background-color: #ffd800;
     padding: 50px;
      }
+
+
 footer {
     background-color: #954b4b;
     color: #efe5d0;
@@ -61,8 +71,9 @@ footer {
     margin: 0px 0px 0px 0px;
     font-size: 90%;
        }
- .floating-box 
-  	{
+
+.floating-box 
+     {
         display: inline-block;
         width: 830px;
         margin: 10px;
@@ -70,42 +81,49 @@ footer {
         float: center;
         box-shadow: 0 5px 5px grey;
         }
+
+#two {
+            position: absolute;
+            left: 700px; top:1000px;
+}
+
 </style>
 </head>
 
-<html>
 <body>
+<audio src="music.mp3" autoplay controls></audio>
     <header>
-        <h1>My Blog Page</h1>
+        <h1>My Blog Page</h1><hr>
+		<a id="section1">
     </header>
     <form id="SearchBar">
         <input type="text" name="search" />
         <input type="submit" value="검색"/>
-    </form>
+    </form><hr>
    
  <nav>
         <h1>Contents</h1>
         <ul>
-             <li><a href="myblog.html">HOME</a></li>		
-            <li><a href="table.html">시간표</a></li>
-            <li><a href="hobby.html">취미</a></li>
-            <li><a href="board.html">방명록</a></li>
+             <li><a href="#section1">HOME</a></li>		
+            <li><a href="#section2">시간표</a></li>
+            <li><a href="#section3">취미</a></li>
+            <li><a href="#section4">방명록</a></li>
         </ul> 
         <figure>
-            <img width="90" height="90"
-                src="hong.png"/>
+            <img width="100" height="100"
+                src="ej.jpg"/>
             <figcaption>란이</figcaption>
         </figure>
     </nav>
 
     <section id="main">
         <article>
-
-            <h1><p style=background-color:blue><font color=white>Who am I?</font></h1>
+	    
+            <h1><p style=background-color:blue><font color=white>&lt;Who am I?&gt;</font></h1>
 
             <div class="floating-box">
 <p>&nbsp;&nbsp; <b>한성대학교 4학년 재학중인 윤상운 입니다.<br> 
- <img width="90" height="90" src="hong.png"/><br>
+ <img width="90" height="90" src="yoon.jpg"/><br>
 이름: 윤 상 운 <br>
 학번: 1151128 <br>
 전공: 의류패션산업<br> 
@@ -113,10 +131,107 @@ footer {
 </p>
 </div>
 </article>
+
+
+<article>
+	
+     <h3><p style=background-color:blue><font color=white>&lt;2016-1 시간표&gt;</font></h3>
+            <a id="section2">
+<table border="1">
+<caption>아름답다</caption>
+<tr>
+    <td></td>
+    <td>월</td>
+    <td>화</td>
+    <td>수</td>
+    <td>목</td>
+    <td>금</td>
+</tr>
+
+<tr>
+    <td>1교시</td><td></td><td rowspan="2">웹프로그래밍</td><td></td><td><td rowspan="3">20세기 복식</td>
+    </tr>
+<tr>
+    <td>2교시</td><td></td><td></td><td></td>
+    </tr>
+<tr>
+    <td>3교시</td><td></td><td rowspan="2">대학수학1</td><td></td><td></td>
+</tr>
+<tr>
+    <td>4교시</td><td></td><td></td><td>웹프로그래밍</td><td></td>
+    </tr>
+<tr>
+<td>5교시</td><td></td><td rowspan="2">JAVA</td><td rowspan="2">글로벌 패션</td><td rowspan="2">글로벌 패션</td><td></td>
+    </tr>
+    <tr>
+        <td>6교시</td><td>JAVA</td><td></td>
+        </tr>
+    <tr>
+        <td>7교시</td><td>C프로그래밍</td><td></td><td></td><td></td><td></td>
+        </tr>
+<tr>
+    <td>8교시</td><td></td><td></td><td rowspan="2">C프로그래밍</td><td></td><td></td>
+</tr>
+<tr>
+    <td>9교시</td><td></td><td></td><td></td><td></td>
+</tr>
+</table>
+
+
+</article>
+<a href="#section1"><b>HOME으로 가기</b></a>
+
+<article>
+           <h1><p style=background-color:blue><font color=white>&lt;길냥이랑 놀기&gt;</font></h1>
+ <a id="section3">
+            
+<img id=two width="250" height="180" src="길냥이2.jpg" />
+<img  width="250" height="180" src="길냥이3.jpg"/>
+<img  width="250" height="180" src="길냥이4.jpg"/>
+<br><br><br><br><br><br><br><br><br>
+</article>
+<a href="#section1"><b>HOME으로 가기</b></a>
+
+<article>
+ <h1><p style=background-color:blue><font color=white>&lt;흔적남기기&gt;</font></h1>
+<a id="section4">
+<div class="floating-box">
+
+<fieldset>
+<legend>작성자정보</legend>
+<form>
+<table>
+<tr>
+<td>닉네임 : </td>
+<td><input type=text></td>
+</tr>
+<tr>
+<td>비밀번호 : </td>
+<td><input type=text></td>
+<tr>
+</table>
+<br>
+남<input type="radio" name="gender" value=male>
+여<input type="radio" name="gender" value=female>
+</fieldset>
+
+<fieldset>
+<legend>내용</legend>
+<textarea cols=80 rows=5></textarea>
+<br>
+덧붙이는 말: 
+반가워!<input type="radio" name="a" value=1>
+싸우자!<input type="radio" name="a" value=2>
+널좋아해촤하하!<input type="radio" name="a" value=3>
+</fieldset>
+<input type=submit value="저장">
+<input type=reset value="재입력">
+</form>
+</div>
+</article>
+<a href="#section1"><b>HOME으로 가기</b></a>
 </section>
 
-<audio src="music.mp3" autoplay controls ></audio>
 <footer>2016 Web Programing</footer>
 </body>
 </html>
-
