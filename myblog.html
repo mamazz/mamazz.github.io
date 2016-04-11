@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>윤상운</title>
+<style>
+
+
+
+
+ul { overflow: hidden; }
+        li {
+            list-style: none;
+            float:left; padding: 15px;
+            }
+
+        li:first-child { border-radius: 10px 0 0 0; }
+        li:last-child { border-radius:  0 10px 0 10px; }
+
+        li:nth-child(2n) { background-color: red; }
+        li:nth-child(2n+1) { background-color:brown; }
+
+        li:nth-child(2n+1):hover
+	{
+            background-color: black;
+            color:yellow;
+         }
+ 
+        li:nth-child(2n):hover
+	{
+            background-color: green;
+            color:yellow;
+         }
+        li a:first-child{color:blue}
+
+body {
+    background-color: #efe5d0;
+    font-family: Arial, "Trebuchet MS", sans-serif;
+    margin: 10px 100px 100px 100px;
+      }
+
+header {
+    background-color: #e3afed;
+    color: #000000;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+        }
+
+h1 {
+    margin: 0px;
+    }
+
+section#main 
+{
+    display: table-cell;
+    background-color: yellow;
+text-align: center;
+    padding: 15px;
+}
+
+nav {
+    display: table-cell;
+    background-color: #ffd800;
+    padding: 50px;
+     }
+
+footer {
+    background-color: #954b4b;
+    color: #efe5d0;
+    text-align: center;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    font-size: 90%;
+       }
+ .floating-box 
+  	{
+        display: inline-block;
+        width: 830px;
+        margin: 10px;
+        border: 10px blue;
+        float: center;
+        box-shadow: 0 5px 5px grey;
+        }
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>My Blog Page</h1>
+    </header>
+    <form id="SearchBar">
+        <input type="text" name="search" />
+        <input type="submit" value="검색"/>
+    </form>
+   
+ <nav>
+        <h1>Contents</h1>
+        <ul>
+             <li><a href="myblog.html">HOME</a></li>		
+            <li><a href="table.html">시간표</a></li>
+            <li><a href="hobby.html">취미</a></li>
+            <li><a href="board.html">방명록</a></li>
+        </ul> 
+        <figure>
+            <img width="90" height="90"
+                src="hong.png"/>
+            <figcaption>란이</figcaption>
+        </figure>
+    </nav>
+
+    <section id="main">
+        <article>
+
+            <h1><p style=background-color:blue><font color=white>Who am I?</font></h1>
+            <div class="floating-box">
+<p>&nbsp;&nbsp; <b>한성대학교 4학년 재학중인 윤상운 입니다.<br> 
+ <img width="90" height="90" src="hong.png"/><br>
+이름: 윤 상 운 <br>
+학번: 1151128 <br>
+전공: 의류패션산업<br> 
+부전공: IT응용시스템공학<br>  
+</p>
+</div>
+</article>
+</section>
+
+<audio src="music.mp3" controls="controls" id="player" ></audio>
+<footer>2016 Web Programing</footer>
+</body>
+</html>
