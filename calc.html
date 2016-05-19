@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DOM Exercise À±»ó¿î</title>
+    <title>DOM Exercise ìœ¤ìƒìš´</title>
     <script>
         var first_val;
         var operand;
 
-        function display_debug() { //4.ÃÖÇÏ´ÜÀÇ ÅØ½ºÆ® ¼öÁ¤°ú °ü·ÃÇÑ ÇÔ¼ö
+        function display_debug() { //4.ìµœí•˜ë‹¨ì˜ í…ìŠ¤íŠ¸ ìˆ˜ì •ê³¼ ê´€ë ¨í•œ í•¨ìˆ˜
             var debug_out = document.getElementById("debug_area");
             var debug_text = "<p>first_val:" + first_val + "</p>";
             debug_text += "<p>operand:" + operand + "</p>";
-            debug_out.innerHTML = debug_text; //debug_text¶ó´Â º¯¼ö¸¦ html³»ºÎ¿¡ µğ½ºÇÃ·¹ÀÌ
-			document.getElementById('debug_area').style.backgroundColor="yellow"; //style ÁöÁ¤
+            debug_out.innerHTML = debug_text; //debug_textë¼ëŠ” ë³€ìˆ˜ë¥¼ htmlë‚´ë¶€ì— ë””ìŠ¤í”Œë ˆì´
+			document.getElementById('debug_area').style.backgroundColor="yellow"; //style ì§€ì •
 		}
 
         function button_click() {
@@ -32,13 +32,13 @@
             display_debug();
         }
 		
-	function button_minus() { //3. ¸¶ÀÌ³Ê½º ÇÔ¼ö ±¸Çö
-            var text = document.getElementById("text_display"); //»ó´Ü input type=textÅÂ±× ¿¬µ¿
-            first_val = parseInt(text.value); //input type=text ³»ÀÇ ³»¿ëÀ» first_val Àü¿ªº¯¼ö¿¡ ÀúÀå(int·Î ¹Ù²ã ÀúÀå)
-            text.value = ''; //input type=text ³»ÀÇ ³»¿ë »èÁ¦ ÀÌ¹Ì ÀúÀåµÆÀ¸¹Ç·Î, ¾Æ´Ï¸é ÃàÀûµÊ
-            operand = 'minus'; //operand ¶ó´Â º¯¼ö¸¦ ¿¬»êÀÚ±¸ºĞÀ» À§ÇØ ÅØ½ºÆ® ÀúÀå, ¹Ø¿¡¼­ ±¸ºĞÇÏ¿© if¹® ½ÇÇà À§ÇØ
+	function button_minus() { //3. ë§ˆì´ë„ˆìŠ¤ í•¨ìˆ˜ êµ¬í˜„
+            var text = document.getElementById("text_display"); //ìƒë‹¨ input type=textíƒœê·¸ ì—°ë™
+            first_val = parseInt(text.value); //input type=text ë‚´ì˜ ë‚´ìš©ì„ first_val ì „ì—­ë³€ìˆ˜ì— ì €ì¥(intë¡œ ë°”ê¿” ì €ì¥)
+            text.value = ''; //input type=text ë‚´ì˜ ë‚´ìš© ì‚­ì œ ì´ë¯¸ ì €ì¥ëìœ¼ë¯€ë¡œ, ì•„ë‹ˆë©´ ì¶•ì ë¨
+            operand = 'minus'; //operand ë¼ëŠ” ë³€ìˆ˜ë¥¼ ì—°ì‚°ìêµ¬ë¶„ì„ ìœ„í•´ í…ìŠ¤íŠ¸ ì €ì¥, ë°‘ì—ì„œ êµ¬ë¶„í•˜ì—¬ ifë¬¸ ì‹¤í–‰ ìœ„í•´
 
-            display_debug(); //ÃÖÇÏ´ÜÀÇ ÅØ½ºÆ® ¼öÁ¤°ú °ü·ÃÇÑ ÇÔ¼ö È£Ãâ, º¸¿©Áö´Â ÀÛ¾÷
+            display_debug(); //ìµœí•˜ë‹¨ì˜ í…ìŠ¤íŠ¸ ìˆ˜ì •ê³¼ ê´€ë ¨í•œ í•¨ìˆ˜ í˜¸ì¶œ, ë³´ì—¬ì§€ëŠ” ì‘ì—…
         }
 		
 	function button_multi() {
@@ -96,7 +96,7 @@
                 buttons[i].onclick = button_click;
             }
             document.getElementById("btn_plus").onclick = button_plus;
-            document.getElementById("btn_minus").onclick = button_minus; //2. Á¤ÀÇÇÑ ÇÔ¼ö¸¦ ÅëÇØ onclickÀÌº¥Æ®Ã³¸® : ¾ÆÁ÷ ÇÔ¼ö´Â ¹Ì±¸Çö
+            document.getElementById("btn_minus").onclick = button_minus; //2. ì •ì˜í•œ í•¨ìˆ˜ë¥¼ í†µí•´ onclickì´ë²¤íŠ¸ì²˜ë¦¬ : ì•„ì§ í•¨ìˆ˜ëŠ” ë¯¸êµ¬í˜„
 	    document.getElementById("btn_multi").onclick = button_multi;	 
 	    document.getElementById("btn_div").onclick = button_div;
 	    document.getElementById("btn_equal").onclick = button_equal;
@@ -119,14 +119,10 @@
 <button class="num_btn">7</button>
 <button class="num_btn">8</button>
 <button class="num_btn">9</button>
-<button id="btn_minus">-</button><br/> <!-- 1. id ÁöÁ¤ -->
+<button id="btn_minus">-</button><br/> <!-- 1. id ì§€ì • -->
 <button class="num_btn">0</button>
 <button id="btn_multi">X</button>
 <button id="btn_div">/</button>
 <button id="btn_equal">=</button><br/>
 
 <div id="debug_area">
-
-</div>
-</body>
-</html>
