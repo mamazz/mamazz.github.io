@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Exercise 윤상운</title>
+    <script>
+        var first_val;
+        var operand;
+
+        function display_debug() { //4.최하단의 텍스트 수정과 관련한 함수
+            var debug_out = document.getElementById("debug_area");
+            var debug_text = "<p>first_val:" + first_val + "</p>";
+            debug_text += "<p>operand:" + operand + "</p>";
+            debug_out.innerHTML = debug_text; //debug_text라는 변수를 html내부에 디스플레이
+			document.getElementById('debug_area').style.backgroundColor="yellow"; //style 지정
+		}
+
+        function button_click() {
+            var text = document.getElementById("text_display");
+            var num = this.textContent;
+            text.value = text.value + num;
+
+            display_debug();
+        }
+
+        function button_plus() {
+            var text = document.getElementById("text_display");
+            first_val = parseInt(text.value);
+            text.value = '';
+            operand = 'plus';
+
+            display_debug();
+        }
+		
+	function button_minus() { //3. 마이너스 함수 구현
+            var text = document.getElementById("text_display"); //상단 input type=text태그 연동
+            first_val = parseInt(text.value); //input type=text 내의 내용을 first_val 전역변수에 저장(int로 바꿔 저장)
+            text.value = ''; //input type=text 내의 내용 삭제 이미 저장됐으므로, 아니면 축적됨
+            operand = 'minus'; //operand 라는 변수를 연산자구분을 위해 텍스트 저장, 밑에서 구분하여 if문 실행 위해
+
+            display_debug(); //최하단의 텍스트 수정과 관련한 함수 호출, 보여지는 작업
+        }
+		
+	function button_multi() {
+            var text = document.getElementById("text_display");
+            first_val = parseInt(text.value);
+            text.value = '';
+            operand = 'multi';
+
+            display_debug();
+        }
+
+	function button_div() {
+            var text = document.getElementById("text_display");
+            first_val = parseInt(text.value);
+            text.value = '';
+            operand = 'div';
+
+            display_debug();
+        }
+
+        function button_equal() {
+            var text = document.getElementById("text_display");
+            var second_val = parseInt(text.value);
+            if (operand == 'plus') {
+                text.value = '' + (first_val + second_val);
+            }
+		else if (operand == 'minus'){
+			text.value = '' + (first_val - second_val);
+			}
+
+		else if (operand == 'multi'){
+			text.value = '' + (first_val * second_val);
+			}
+
+		else if (operand == 'div'){
+			text.value = '' + (first_val / second_val);
+			}
+			
+            operand = '';
+
+            display_debug();
+        }
+
+        function button_clear() {
+            var text = document.getElementById("text_display");
+            text.value = '';
+            operand = '';
+
+            display_debug();
+        }
+
+        window.onload = function (e) {
+            var buttons = document.getElementsByClassName("num_btn");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = button_click;
+            }
+            document.getElementById("btn_plus").onclick = button_plus;
+            document.getElementById("btn_minus").onclick = button_minus; //2. 정의한 함수를 통해 onclick이벤트처리 : 아직 함수는 미구현
+	    document.getElementById("btn_multi").onclick = button_multi;	 
+	    document.getElementById("btn_div").onclick = button_div;
+	    document.getElementById("btn_equal").onclick = button_equal;
+            document.getElementById("btn_clear").onclick = button_clear;
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="text_display"/><br/>
+
+<button class="num_btn">1</button>
+<button class="num_btn">2</button>
+<button class="num_btn">3</button>
+<button id="btn_clear">C</button><br/>
+<button class="num_btn">4</button>
+<button class="num_btn">5</button>
+<button class="num_btn">6</button>
+<button id="btn_plus">+</button><br/>
+<button class="num_btn">7</button>
+<button class="num_btn">8</button>
+<button class="num_btn">9</button>
+<button id="btn_minus">-</button><br/> <!-- 1. id 지정 -->
+<button class="num_btn">0</button>
+<button id="btn_multi">X</button>
+<button id="btn_div">/</button>
+<button id="btn_equal">=</button><br/>
+
+<div id="debug_area">
+
+</div>
+</body>
+</html>
