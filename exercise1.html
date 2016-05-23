@@ -3,28 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
 <script>
 
     function getAwords(words) {
         var return_words = [];
         for (var i = 0; i < words.length; i++) {
-            if (words[i].startsWith('a') || words[i]:
-            startswith('A')
-        )
+            if (words[i].startsWith('a') || words[i].startsWith('A'))
             return_words.push(words[i]);
         }
         return return_words;
     }
 
-    function getAwords(words, begin_char) {
+    function getAwordsB(words, begin_char) {
         var return_words = [];
-        var small_char = begin_char. toLowerCase();
-        for (var i = 0; i < words, begin_char.length; i++) {
-            if (words[i].startsWith(small_char) || words, begin_char[i]:
-            startswith('A')
-        )
+        var small_char = begin_char.toLowerCase();
+        var begin_char = begin_char.toUppercase();
+        for (var i = 0; i < words.length; i++) {
+            if (words[i].startsWith(small_char) || words[i].startsWith(begin_char))
             return_words.push(words[i]);
         }
         return return_words;
@@ -38,5 +33,9 @@
     console.log(ret2.join(',')); // 
 
 </script>
+</head>
+
+<body>
+    
 </body>
 </html>
