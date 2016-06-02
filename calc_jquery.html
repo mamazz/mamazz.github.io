@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +26,7 @@
         }
 
         function button_click() {
-            var num = $(this).text(); //this.textContent;
+            var num = $(this).text(); 
             var newval = $('#text_display').val() + num;
             $('#text_display').val(newval);
 
@@ -36,7 +35,7 @@
 
 
         function button_plus() {
-            var text = $('#text_display'); //this.textContent;
+            var text = $('#text_display'); 
             first_val = parseInt(text.val());
            text.val('');
             operand = 'plus';
@@ -45,7 +44,7 @@
         }
 
         function button_minus() {
-            var text = $('#text_display'); //this.textContent;
+            var text = $('#text_display'); 
             first_val = parseInt(text.val());
             text.val('');
             operand = 'minus';
@@ -53,18 +52,18 @@
             display_debug();
         }
 
-        function button_multiply() {
-            var text = $('#text_display'); //this.textContent;
+        function button_multi() {
+            var text = $('#text_display');
             first_val = parseInt(text.val());
             text.val('');
-            operand = 'multiply';
+            operand = 'multi';
         }
 
-        function button_devide() {
-            var text = $('#text_display'); //this.textContent;
+        function button_div() {
+            var text = $('#text_display'); 
             first_val = parseInt(text.val());
             text.val('');
-            operand = 'devide';
+            operand = 'div';
         }
 
         function button_equal() {
@@ -76,13 +75,12 @@
             else if (operand=='minus'){
                 text.val (('') + (first_val - second_val));
             }
-            else if (operand=='multiply'){
+            else if (operand=='multi'){
                 text.val (('') + (first_val * second_val));
             }
-            else if (operand=='devide'){
+            else if (operand=='div'){
                 text.val (('') + (first_val / second_val));
             }
-
 
             display_debug();
         }
@@ -100,8 +98,8 @@
             $(".num_btn").click(button_click);
             $('#btn_plus').click(button_plus);
             $('#btn_minus').click(button_minus);
-            $('#btn_multiply').click(button_multiply);
-            $('#btn_devide').click(button_devide);
+            $('#btn_mult').click(button_multi);
+            $('#btn_div').click(button_div);
             $('#btn_equal').click(button_equal);
             $('#btn_clear').click(button_clear);
 
@@ -124,8 +122,8 @@
 <button class="num_btn">9</button>
 <button id="btn_minus">-</button><br/>
 <button class="num_btn">0</button>
-<button id="btn_multiply">×</button>
-<button id="btn_devide">/</button>
+<button id="btn_multi">×</button>
+<button id="btn_div">/</button>
 
 <button id="btn_equal">=</button><br/>
 
