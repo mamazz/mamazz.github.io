@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>윤상운ex1</title>
 <script>
 
     function getAwords(words) {
@@ -17,14 +17,13 @@
     function getWordsBeginWith(words, begin_char) {
         var return_words = [];
         var small_char = begin_char.toLowerCase();
-        var begin_char = begin_char.toUppercase();
+        var big_char = begin_char.toUppercase();
         for (var i = 0; i < words.length; i++) {
-            if (words[i].startsWith(small_char) || words[i].startsWith(begin_char))
+            if (words[i].startsWith(small_char) || words[i].startsWith(big_char))
             return_words.push(words[i]);
         }
         return return_words;
     }
-
 
     var test = ['apple', 'Apple', 'banana', 'Blueberry', 'peach', 'Melon'];
     var ret = getAwords(test);
@@ -36,6 +35,5 @@
 </head>
 
 <body>
-    
 </body>
 </html>
